@@ -22,6 +22,7 @@ import java.util.Iterator;
 public class SplashActivity extends Activity {
     //url to currency codes used in this application
     public static final String URL_CODES = "http://openexchangerates.org/api/currencies.json";
+    public static final String KEY_ARRAYLIST = "key_arraylist";
     //ArrayList of currencies that will be fetched and passed into MainActivity
     private ArrayList<String> mCurrencies;
 
@@ -56,6 +57,9 @@ public class SplashActivity extends Activity {
                     key = (String)iterator.next();
                     mCurrencies.add(key + " | " + jsonObject.getString(key));
                 }
+                Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
+                mainIntent.putExtra(KEY_ARRAYLIST, mCurrencies);
+                startActivity(mainIntent);
                 finish();
 
             } catch (JSONException e) {
