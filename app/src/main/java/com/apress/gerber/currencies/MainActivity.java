@@ -22,7 +22,7 @@ import java.util.Collections;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
-
+//made a change for commit check
     //define members that correspond to Views in our layout
     private Button mCalcButton;
     private TextView mConvertedTextView;
