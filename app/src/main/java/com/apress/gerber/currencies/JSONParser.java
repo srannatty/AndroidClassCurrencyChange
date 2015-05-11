@@ -53,7 +53,8 @@ public class JSONParser {
             sInputStream.close();
             sRawJsonString = stringBuilder.toString();
         } catch (Exception e) {
-            Log.e("Error reading from Buffer", "Conversion error " + e.toString());
+            //Error at log because more than 23 characters
+            Log.e("Err reading from Buffer", "Conversion error " + e.toString());
         }
 
         try {
