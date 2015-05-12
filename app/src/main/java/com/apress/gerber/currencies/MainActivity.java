@@ -34,7 +34,7 @@ import java.util.Properties;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
-//made a change for commit check
+
     //define members that correspond to Views in our layout
     private Button mCalcButton;
     private TextView mConvertedTextView;
@@ -44,7 +44,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
 
     //just keys, should I externalize this?
-    //textbook has it For = "FOR_CURRENCY";
+    //textbook has it For = "FOR_CURRENCY" but I am following code from the class;
     public static final String FOR = "FOR";
     public static final String HOM = "HOM";
 
