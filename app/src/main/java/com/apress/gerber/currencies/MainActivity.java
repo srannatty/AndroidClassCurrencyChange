@@ -139,7 +139,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         AssetManager assetManager = this.getResources().getAssets();
         Properties properties = new Properties();
         try {
-            InputStream inputStream = assetManager.open("open_key");
+            InputStream inputStream = assetManager.open("keys.properties");
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -311,7 +311,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
             try {
                 if (jsonObject == null) {
-                    throw new JSONException("no data availble.");
+                    throw new JSONException("no data available.");
                 }
                 JSONObject jsonRates = jsonObject.getJSONObject(RATES);
 
